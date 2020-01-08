@@ -4,14 +4,14 @@ This repo includes all (beside WiFi and BT) the fixes for macOS Mojave on E7250.
 
 Tested on:
 
-Model: Dell E7250
-CPU: Intel Core i5-5300U
-GPU: Intel HD Graphics 5500
-RAM: 8GB DDR3 1600Mhz
-Storage: SAMSUNG SSD PM871 mSATA 128GB
-WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (which is not supported)
-GSM/LTE: Sierra Wireless AirPrime EM7305 (DW5809e)
-Software: macOS 10.14.6 Mojave
+- Model: Dell E7250
+- CPU: Intel Core i5-5300U
+- GPU: Intel HD Graphics 5500
+- RAM: 8GB DDR3 1600Mhz
+- Storage: SAMSUNG SSD PM871 mSATA 128GB
+- WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (which is not supported)
+- GSM/LTE: Sierra Wireless AirPrime EM7305 (DW5809e)
+- Software: macOS 10.14.6 Mojave
 
 # What works?
 
