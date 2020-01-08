@@ -45,7 +45,7 @@ Thanks for:
 
 - Rehabman (by fixing the graphics, battery information and keyboard issues)
 - osxlatitude (by fixing cellular connectivities)
-- me (by wasting his time to write this and provide fixes)
+- me (by wasting my time to write this and provide fixes)
 
 
 All this was written on an E7250 with Mojave installed :D
