@@ -19,7 +19,7 @@ Everything except WiFi and BT. You need to change the card.
 
 # Download and Install
 
-Download a clone of this repo and paste all the necessary files in the folders.
+Download a clone of this repo and paste all the necessary files to the folders.
 
 # What to expect
 
