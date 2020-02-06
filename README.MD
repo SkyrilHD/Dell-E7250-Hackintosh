@@ -1,6 +1,8 @@
 # Dell E7250 Hackintosh
 
-This repo includes some fixes for macOS Catalina on E7250.
+This repo includes all fixes for macOS Catalina on E7250.
+
+This EFI folder can also be used on Mojave. I made also a separated branch specific for Mojave.
 
 I was about to give up on this project because it hang at "PCI Configuration Begin", but thankfully it was fixed after creating a proper DSDT.
 
@@ -9,7 +11,7 @@ Tested on:
 - Model: Dell E7250
 - CPU: Intel Core i5-5300U
 - GPU: Intel HD Graphics 5500
-- RAM: 8GB DDR3 1600Mhz
+- RAM: 16GB DDR3 1600Mhz
 - Storage: SAMSUNG SSD PM871 mSATA 128GB
 - WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (only Bluetooth does work)
 - GSM/LTE: Sierra Wireless AirPrime EM7305 (DW5809e)
@@ -17,7 +19,7 @@ Tested on:
 
 # What works?
 
-You can boot to Catalina but don't expect to work it flawlessly.
+Everything... Except WiFi
 
 # Download and Install
 
@@ -25,14 +27,14 @@ Copy the EFI folder to your EFI partition... That's it.
 
 # What to expect
 
-- Works ok...
-- need to select the hard disk in clover menu
+- Works really good
+- FastBoot to macOS
 - no Verbose (Apple Logo)
 - little glitches at Boot (Graphics Driver loads)
-- after sleep there might be not internet
-- brightness control doesn't work (even BIOS side is it buggy)
-- sleep works but ONLY if you press sleep (closing lid does absolutely nothing)
-- Well, Bluetooth is working with (currently) a compromise to not have LTE
+- brightness control works only BIOS side (meaning no brightness control via macOS {use Karabiner to remap the fn-keys})
+- Apple's audio driver as main
+- sleep works
+- Bluetooth is working too
 
 # How to Install macOS Catalina
 
@@ -44,7 +46,9 @@ You need to change your WiFi card to get your internet working. Buy it on eBay o
 
 Thanks for:
 
-- me (by wasting my time to write this, provide fixes and creating a E7250 DSDT)
+- me (by wasting my time to write this, provide fixes and creating an E7250 DSDT)
+- Harvé (by suggesting to inject property in Clover)
+- Rehabman (by fixing the graphics, battery information and keyboard issues)
 
 
 All this was written on an E7250 with Catalina installed :D
