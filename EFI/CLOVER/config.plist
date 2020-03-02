@@ -260,7 +260,106 @@
 	<dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<key>PciRoot(0)/Pci(0x14,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9cb1</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP USB xHCI Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x16,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9cba</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP MEI Controller #1</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x16,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9cbd</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP KT Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1b,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>layout-id</key>
+				<data>CwAAAA==</data>
+				<key>model</key>
+				<string>Realtek ALC3235 High-Definition Audio</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1c,0x0)/Pci(0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci14e4,16bc</string>
+				<key>device_type</key>
+				<string>Media Controller</string>
+				<key>model</key>
+				<string>O2 Micro, Inc. OZ777FFXJM SD/MMC Card Reader Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1c,0x3)/Pci(0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>WiFi</string>
+				<key>compatible</key>
+				<string>pci8086,095a</string>
+				<key>device_type</key>
+				<string>AirPort</string>
+				<key>model</key>
+				<string>Intel Dual Band Wireless-AC 7265</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1d,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9ca6</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP USB EHCI Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1f,0x2)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9c83</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP SATA Controller [AHCI Mode]</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1f,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,9ca2</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Wildcat Point-LP SMBus Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key># DVMT-prealloc</key>
 				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
@@ -306,8 +405,10 @@
 				<data>AAgAAA==</data>
 				<key>#hda-gfx</key>
 				<string>onboard-1</string>
-				<key>AAPL,ig-platform-id</key>
-				<data>BgAmFg==</data>
+				<key>AAPL,slot-name</key>
+				<string>iGPU</string>
+				<key>device_type</key>
+				<string>Display Controller</string>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
@@ -315,36 +416,27 @@
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
 			</dict>
-			<key>PciRoot(0)/Pci(0x03,0)</key>
-			<dict>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-				<key>#layout-id</key>
-				<integer>3</integer>
-				<key>#no-controller-patch</key>
-				<integer>1</integer>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1b)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built-in</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<data>CwAAAA==</data>
-				<key>model</key>
-				<string>Realtek ALC293 High-Definition Audio</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0)</key>
+			<key>PciRoot(0)/Pci(0x3,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Built-in</string>
 				<key>compatible</key>
-				<string>pci14e4,16bc</string>
-				<key>device-type</key>
-				<string>Media Controller</string>
+				<string>pci8086,160c</string>
+				<key>device_type</key>
+				<string>Chipset</string>
 				<key>model</key>
-				<string>O2 Micro, Inc. SD/MMC Card Reader Controller</string>
+				<string>Broadwell-U Audio Controller</string>
+			</dict>
+			<key>PciRoot(0)/Pci(0x4,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Built-in</string>
+				<key>compatible</key>
+				<string>pci8086,1603</string>
+				<key>device_type</key>
+				<string>Chipset</string>
+				<key>model</key>
+				<string>Broadwell-U Processor Thermal Subsystem</string>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
