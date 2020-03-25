@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/SkyrilHD/Dell-E7250-Hackintosh.svg?branch=10.15)](https://travis-ci.com/SkyrilHD/Dell-E7250-Hackintosh)
+
 # Dell E7250 Hackintosh
 
 This repo includes all fixes for macOS Catalina on E7250.
