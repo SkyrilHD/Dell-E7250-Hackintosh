@@ -36,7 +36,7 @@ Copy the EFI folder to your EFI partition... That's it.
 - brightness control works only BIOS side (meaning no brightness control via macOS {use Karabiner to remap the fn-keys})
 - Apple's audio driver as main
 - sleep works
-- Bluetooth is working too
+- Bluetooth is working too and can also be disabled
 - {BETA} You need to enter your SSID in the kext file and 'kextload' it
 - {BETA} Restarts randomly with WiFi enabled (only for light-use)
 
@@ -49,12 +49,13 @@ You need to change your WiFi card to get your internet working. Buy it on eBay o
 
 # Credits
 
-Thanks for:
+Thanks to:
 
-- me (by wasting my time to write this, provide fixes and creating an E7250 DSDT)
-- Harvé (by suggesting to inject property in Clover)
-- Rehabman (by fixing the graphics, battery information and keyboard issues)
-- ________ (by fixing the Intel WiFi card)
+- me (for wasting my time to write this, provide fixes and creating an E7250 DSDT)
+- Harvé (for suggesting to inject property in Clover)
+- Rehabman (for fixing the graphics, battery information and keyboard issues)
+- zxystd (for fixing Bluetooth issue)
+- ________ (for fixing the Intel WiFi card)
 
 
 All this was written on an E7250 with Catalina installed :D
