@@ -4,20 +4,20 @@
 
 This repo includes all fixes for macOS Catalina on E7250.
 
-This EFI folder can also be used on Mojave. I made also a separated branch specific for Mojave.
+This EFI folder can also be used on Mojave. I made also a separated branch specific for Mojave (it's messed up).
 
 I was about to give up on this project because it hang at "PCI Configuration Begin", but thankfully it was fixed after creating a proper DSDT.
 
 Tested on:
 
-- Model: Dell E7250
+- Model: Dell Latitude E7250
 - CPU: Intel Core i5-5300U
 - GPU: Intel HD Graphics 5500
 - RAM: 16GB DDR3 1600Mhz
 - Storage: SAMSUNG SSD PM871 mSATA 128GB
-- WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (only Bluetooth does work) (There is a fix to use the Intel WiFi but I am not publish it until it is in public and stable)
+- WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (only Bluetooth does work) (There is a fix (10.15.2) to use the Intel WiFi but I am not publish it until it is in public and stable)
 - GSM/LTE: Sierra Wireless AirPrime EM7305 (DW5809e)
-- Software: macOS 10.15.2 Catalina
+- Software: macOS 10.15.4 Catalina
 
 # What works?
 
@@ -37,6 +37,12 @@ Copy the EFI folder to your EFI partition... That's it.
 - Apple's audio driver as main
 - sleep works
 - Bluetooth is working too and can also be disabled
+- don't install the 10.15.4 update if you want to use the Intel WiFi
+
+If you have an AppleIntelWiFi.kext installed on your system:
+- AppleIntelWiFi.kext kernel panics our system for now (A kext releasing IOPCIDevice has corrupted the registry)
+- So the points below, applies only for 10.15.2
+
 - {BETA} You need to enter your SSID in the kext file and 'kextload' it
 - {BETA} Restarts randomly with WiFi enabled (only for light-use)
 
