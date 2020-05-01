@@ -4,7 +4,9 @@
 
 This repo includes all fixes for macOS Catalina on E7250.
 
-This EFI folder can also be used on Mojave. I made also a separated branch specific for Mojave (it's messed up), but use this :D.
+The Clover EFI folder can also be used on Mojave. I also made a separate branch specific for Mojave (it's messed up), but use this :D.
+
+PLEASE don't install the OpenCore EFI because it is currently not in a working state. Of course the EFI will boot up, but you will give up everything. So, please use Clover for now.
 
 I was about to give up on this project because it hang at "PCI Configuration Begin", but thankfully it was fixed after creating a proper DSDT.
 
