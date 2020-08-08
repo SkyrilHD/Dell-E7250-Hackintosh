@@ -4,9 +4,9 @@
 
 This repo includes all fixes for macOS Catalina on E7250.
 
-The Clover EFI folder can also be used on Mojave. I also made a separate branch specific for Mojave (it's messed up), but use this :D.
+The EFI folders can also be used on Mojave. I also made a separate branch specific for Mojave (it's messed up & only Clover), but use this instead :D.
 
-PLEASE don't install the OpenCore EFI because it is currently not in a working state. Of course the EFI will boot up, but you will give up everything. So, please use Clover for now.
+The E7250 gets OpenCore support. :) You can now choose which bootloader you want to use. Currently, macOS Big Sur is NOT bootable. I'll look into it on public betas.
 
 I was about to give up on this project because it hang at "PCI Configuration Begin", but thankfully it was fixed after creating a proper DSDT.
 
@@ -17,7 +17,7 @@ Tested on:
 - GPU: Intel HD Graphics 5500
 - RAM: 16GB DDR3 1600Mhz
 - Storage: SAMSUNG SSD PM871 mSATA 128GB
-- WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (only Bluetooth does work) (There is a fix to use the Intel WiFi but I will not publish it until it is in public and stable)
+- WiFi & Bluetooth: Intel Dual Band Wireless-AC 7265 (only Bluetooth does work with this EFI)
 - GSM/LTE: Sierra Wireless AirPrime EM7305 (DW5809e)
 - Software: macOS 10.15.4 Catalina
 
@@ -36,14 +36,16 @@ Copy the EFI folder to your EFI partition... That's it.
 - little glitches at Boot (Graphics Driver loads)
 - brightness control works only BIOS side (meaning no brightness control via macOS {use Karabiner to remap the fn-keys})
 - Apple's audio driver as main
-- sleep works
+- sleep works (finally)
 - Bluetooth is working too and can also be disabled
-- {BETA} You need to enter your SSID in the kext file and 'kextload' it
-- {BETA} Restarts randomly with WiFi enabled (only for light-use)
+
+# My laptop doesn't sleep :(
+
+It takes time to put the laptop to sleep. Usually it takes 30 seconds - 1 minute. If it doesn't sleep, check to see if there are preventers.
 
 # How to Install macOS Catalina
 
-First of all, you need an already working Mac with supported Specs (check Apple's website). Download the latest verison of Catalina from the App Store and use this command:
+First of all, you need an already working Mac with supported Specs (check Apple's website). Download the latest version of Catalina from the App Store and use this command:
 
 sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 
@@ -56,11 +58,12 @@ You need to change your WiFi card to get your internet working. Buy it on eBay o
 
 Thanks to:
 
-- me (for wasting my time to write this, provide fixes and creating an E7250 DSDT)
-- Harvé (for suggesting to inject property in Clover)
+- me (for wasting my time to write this and provide fixes)
+- acidanthera & SergeySlice (for making awesome bootloaders)
+- Harvé (for suggesting to inject property in Clover {also applies to OpenCore ^-^})
 - Rehabman (for fixing the graphics, battery information and keyboard issues)
-- zxystd (for fixing Bluetooth issue)
-- ________ (for fixing the Intel WiFi card)
+- zxystd (for fixing the Bluetooth issue and Intel WiFi card)
+- dorania (with their troubleshooting guide, I was able to fix sleep)
 
 
 All this was written on an E7250 with Catalina installed :D
