@@ -30,9 +30,9 @@ Copy the EFI folder to your EFI partition... That's it.
 ## What to expect
 
 - Works really good
-- Verbose mode (text at booting)
+- no Verbose (Apple Logo)
 - little glitches at boot (Graphics Driver loads)
-- brightness control works only BIOS side (meaning no brightness control via macOS)
+- brightness control works only by doing Fn+F6 (Brightness down) and Fn+B (Brightness up)
 - Apple's audio driver as main
 - sleep works
 - Bluetooth is working too and can also be disabled
