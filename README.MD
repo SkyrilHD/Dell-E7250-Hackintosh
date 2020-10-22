@@ -32,7 +32,7 @@ Copy the EFI folder to your EFI partition... That's it.
 - Works really good
 - no Verbose (Apple Logo)
 - little glitches at boot (Graphics Driver loads)
-- brightness control works only by doing Fn+F6 (Brightness down) and Fn+B (Brightness up)
+- brightness control now works over F11/F12
 - Apple's audio driver as main
 - sleep works
 - Bluetooth is working too and can also be disabled
