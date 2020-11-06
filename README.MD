@@ -1,10 +1,10 @@
 # Dell E7250 Hackintosh
 
-### This repo includes all fixes for E7250 on macOS Big Sur.
+### This repo contains all the fixes for E7250 on macOS Big Sur.
 
-The EFI folder can also be used on older versions of macOS. But the main support of this branch is based on Big Sur. If you want an EFI that was specifically made for Catalina, check the [10.15 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/10.15).
+The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Big Sur. If you want an EFI made specifically for Catalina, check the [10.15 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/10.15).
 
-This time I have decided to drop Clover support, since I have little to no time. Sorry.
+This time around, I have decided to drop Clover support as I have little to no time. Sorry.
 
 
 Tested on:
@@ -32,26 +32,26 @@ Copy the EFI folder to your EFI partition... That's it.
 - Works really good
 - no Verbose (Apple Logo)
 - little glitches at boot (Graphics Driver loads)
-- brightness control now works over F11/F12
+- brightness control now works via F11/F12
 - Apple's audio driver as main
 - sleep works
 - Bluetooth is working too and can also be disabled
 
 ## My laptop doesn't sleep :(
 
-It takes time to put the laptop to sleep. Usually it takes 30 seconds - 1 minute. If it doesn't sleep, check  if there are any preventers.
+It takes time to put the laptop to sleep. Usually it takes 30 seconds - 1 minute. If it doesn't sleep, check if there are any preventers.
 
 ## How to Install macOS Big Sur
 
 There are two ways you can install Big Sur:
 
-1. If you have an already working macOS, download the Installer through App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
+1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
 
 2. If you are using Windows, use [gibMacOS](https://github.com/corpnewt/gibMacOS) by corpnewt.
 
-After you made a bootable Installer, copy the EFI to the EFI partition and install as usual. After the installation, mount the EFI of the installed OS and copy the EFI folder to its partition.
+After you have created a bootable Installer, copy the EFI folder to the EFI partition and install as usual. After the installation, mount the EFI partition of the installed OS and copy the EFI folder to its partition.
 
-If you want an OOTB-WiFi: You need to change your WiFi card to get your internet working. Buy it on eBay or your trustworthy website and find a suitable card (M.2) with the kexts.
+If you want an OOTB-WiFi: You need to change your WiFi card in order for your internet to work. Buy it on eBay or your trusted website and find a suitable card (M.2) with the kexts.
 
 ## Screenshot
 
@@ -62,7 +62,7 @@ If you want an OOTB-WiFi: You need to change your WiFi card to get your internet
 
 Thanks to:
 
-- me (for wasting my time writing this and providig fixes)
+- me (for wasting my time writing this and providing fixes)
 - acidanthera (for making an awesome bootloader)
 - Harvé (for suggesting to inject property in Clover)
 - DrHurt (for supporting our ALPS Trackpad)
