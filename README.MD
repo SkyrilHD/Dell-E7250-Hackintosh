@@ -29,7 +29,7 @@ Everything...
 
 ## Download and Install
 
-Copy the EFI folder to your EFI partition... That's it.
+Go to the [Releases](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/) page of this repo and download the latest release. Then, copy the EFI folder to your EFI partition... That's it.
 
 ## What to expect
 
