@@ -1,5 +1,7 @@
 # Dell E7250 Hackintosh
 
+[![OpenCore Version](https://img.shields.io/badge/OpenCore-0.6.4-green.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/)
+
 ### This repo contains all the fixes for E7250 on macOS Big Sur.
 
 The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Big Sur. If you want an EFI made specifically for Catalina, check the [10.15 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/10.15).
