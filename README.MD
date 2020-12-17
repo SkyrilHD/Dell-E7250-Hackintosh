@@ -1,6 +1,7 @@
 # Dell E7250 Hackintosh
 
 [![OpenCore Version](https://img.shields.io/badge/OpenCore-0.6.4-green.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/)
+[![GitHub release](https://img.shields.io/github/release/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/)
 
 ### This repo contains all the fixes for E7250 on macOS Big Sur.
 
