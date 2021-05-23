@@ -53,6 +53,10 @@ There are two ways to fix the horizontal glitches (as seen [here](https://github
 
 Starting with v2.3, AirportItlwm is included in the EFI but disabled to ensure stability. To enable Intel WiFi, enable it in the config. The EFI will only have stable versions of AirportItlwm. So if you want to experiment with Intel WiFi, you can do so by visiting the [itlwm repo](https://github.com/OpenIntelWireless/itlwm) and downloading the latest alpha build. Stability can be much worse, so use with caution! Also, do not forget to enable IntelBluetooth to make Bluetooth more stable!
 
+## Touchscreen
+
+For touchscreen models, I also added VoodooI2C to take advantage of the touchscreen display. However, it is disabled. If you want to use it, you have to activate all VoodooI2C-related kexts in the config!
+
 ## How to Install macOS Big Sur
 
 There are two ways you can install Big Sur:
