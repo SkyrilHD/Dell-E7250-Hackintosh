@@ -49,10 +49,6 @@ There are two ways to fix the horizontal glitches (as seen [here](https://github
 
 2. If you want to use pure UEFI as a workaround, you can use [one-key-hidpi](https://github.com/xzhih/one-key-hidpi). Download and run the code and select 'Enable HIDPI (with EDID)'. Then restart your computer and the glitches should be resolved.
 
-## My laptop doesn't sleep :(
-
-It takes time to put the laptop to sleep. Usually it takes 30 seconds - 1 minute. If it doesn't sleep, check if there are any preventers.
-
 ## How to Install macOS Big Sur
 
 There are two ways you can install Big Sur:
