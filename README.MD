@@ -4,12 +4,9 @@
 [![GitHub release](https://img.shields.io/github/tag/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/)
 [![GitHub issues](https://img.shields.io/github/issues/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/issues/)
 
-### This repo contains all the fixes for E7250 on macOS Big Sur.
+### This repo contains all the fixes for E7250 on macOS Monterey.
 
-The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Big Sur. If you want an EFI made specifically for Catalina, check the [10.15 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/10.15).
-
-This time around, I have decided to drop Clover support as I have little to no time. Sorry.
-
+The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Monterey. If you want an EFI made specifically for Big Sur, check the [11.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/11.0).
 
 Tested on:
 
