@@ -90,4 +90,4 @@ Thanks to:
 - zxystd (for fixing the Bluetooth issue and Intel WiFi card)
 
 
-All this was written on an E7250 with Big Sur installed :D
+All this was written on an E7250 with Monterey installed :D
