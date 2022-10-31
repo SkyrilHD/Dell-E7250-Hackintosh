@@ -538,8 +538,6 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BgAmFg==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
