@@ -23,6 +23,7 @@ Software | macOS 13.0 Ventura
 ## What works?
 
 Everything...
+  - Since Ventura: except GPU acceleration [[can be patched]](#GPU-acceleration-on-Ventura)
 
 ## Download and Install
 
