@@ -4,9 +4,9 @@
 [![GitHub release](https://img.shields.io/github/tag/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/)
 [![GitHub issues](https://img.shields.io/github/issues/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/issues/)
 
-### This repo contains all the fixes for E7250 on macOS Monterey.
+### This repo contains all the fixes for E7250 on macOS Ventura.
 
-The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Monterey. If you want an EFI made specifically for Big Sur, check the [11.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/11.0).
+The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Ventura. If you want an EFI made specifically for Monterey, check the [12.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/12.0).
 
 Tested on:
 
@@ -18,7 +18,7 @@ RAM | 16GB DDR3 1600Mhz
 Storage | SK hynix SC210 mSATA 128GB
 WiFi | Intel Dual Band Wireless-AC 7265
 GSM/LTE | Sierra Wireless AirPrime EM7305 (DW5809e)
-Software | macOS 12.4 Monterey
+Software | macOS 13.0 Ventura
 
 ## What works?
 
@@ -26,7 +26,7 @@ Everything...
 
 ## Download and Install
 
-Go to the [Releases](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/) page of this repo and download the latest release. Then, copy the EFI folder to your EFI partition... That's it.
+Go to the [Releases](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/) page of this repo and download the latest release according to the macOS you want to install. Then, copy the EFI folder to your EFI partition... That's it.
 
 ## Graphical glitches in macOS
 
@@ -50,7 +50,7 @@ First we need to download these three Applications: [Hackintool](https://github.
 
 ## Intel WiFi
 
-Starting with v2.3, AirportItlwm is included in the EFI but disabled to ensure stability. To enable Intel WiFi, enable it in the config. The EFI will only have stable versions of AirportItlwm. So if you want to experiment with Intel WiFi, you can do so by visiting the [itlwm repo](https://github.com/OpenIntelWireless/itlwm) and downloading the latest alpha build. Stability can be much worse, so use with caution! Also, do not forget to enable IntelBluetoothFirmware and BlueToolFixup in the config to enable Bluetooth on Monterey!
+Starting with v2.3, AirportItlwm is included in the EFI but disabled to ensure stability. To enable Intel WiFi, enable it in the config. The EFI will only have stable versions of AirportItlwm. So if you want to experiment with Intel WiFi, you can do so by visiting the [itlwm repo](https://github.com/OpenIntelWireless/itlwm) and downloading the latest alpha build. Stability can be much worse, so use with caution! Also, do not forget to enable IntelBluetoothFirmware and BlueToolFixup in the config to enable Bluetooth on Ventura!
 
 If you experience no internet with AirportItlwm, I suggest switching to itlwm and see if it works there.
 
@@ -62,11 +62,11 @@ If you want Continuity features: Buy a Broadcom card on eBay or your trusted web
 
 For touchscreen models, I also added VoodooI2C to take advantage of the touchscreen display. However, it is disabled. If you want to use it, you have to activate all VoodooI2C-related kexts in the config! Since v3.0 there is a new touchpad kext that also uses VoodooInput. So you need to disable VoodooInput that comes with VoodooPS2 and enable VoodooInput that comes with VoodooI2C, otherwise the system will not boot.
 
-## How to Install macOS Monterey
+## How to Install macOS Ventura
 
-There are two ways you can install Monterey:
+There are two ways you can install Ventura:
 
-1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
+1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
 
 2. If you are using Windows, use [macrecovery.py](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/macrecovery) from the offical [OpenCore release package](https://github.com/acidanthera/OpenCorePkg/releases/). Follow this [guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html) to understand how it works.
 
@@ -84,7 +84,7 @@ Thanks to:
 - me (for wasting my time writing this and providing fixes)
 - acidanthera (for making an awesome bootloader)
 - adyrosebrigg (for help and testing USB and dimmed screen on Windows)
-- dortania (with their troubleshooting guide, I was able to fix sleep)
+- dortania (with their troubleshooting guide, I was able to fix sleep and root patches for GPU acceleration)
 - DrHurt (for supporting our ALPS Trackpad)
 - emrah7celik (for providing a guide on how to fix the glitches in macOS with pure UEFI)
 - Harvé (for suggesting to inject property in Clover)
@@ -92,4 +92,4 @@ Thanks to:
 - zxystd (for fixing the Bluetooth issue and Intel WiFi card)
 
 
-All this was written on an E7250 with Monterey installed :D
+All this was written on an E7250 with Ventura installed :D
