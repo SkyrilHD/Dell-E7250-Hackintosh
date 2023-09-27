@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  sonoma:
+  ventura:
     name: Build (Sonoma)
     runs-on: macos-latest
     steps:
@@ -51,13 +51,19 @@ jobs:
           latest: true
           fileName: "*_Monterey.kext.zip"
 
-      # replace Sonoma AirportItlwm with Monterey
+      # replace Ventura AirportItlwm with Monterey
       - run: rm -rf OpenCore/EFI/OC/Kexts/AirportItlwm.kext
       - run: unzip *_Monterey.kext.zip
       - run: mv AirportItlwm.kext OpenCore/EFI/OC/Kexts/
 
       # disable Sonoma specific patches
       - run: plutil -replace "Booter"."Patch".1."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Add".16."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Add".17."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Add".18."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Add".19."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Patch".0."Enabled" -bool false OpenCore/EFI/OC/config.plist
+      - run: plutil -replace "Kernel"."Patch".1."Enabled" -bool false OpenCore/EFI/OC/config.plist
       
       # remove Sonoma specific boot-args
       - run: plutil -replace "NVRAM"."Add"."7C436110-AB2A-4BBB-A880-FE41995C9F82"."boot-args" -string "" OpenCore/EFI/OC/config.plist
