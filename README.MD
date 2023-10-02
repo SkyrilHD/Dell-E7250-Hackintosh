@@ -57,7 +57,6 @@ With Apple dropping support for all pre-Kaby Lake machines on Ventura and newer,
 - Download 'OpenCore-Patcher-GUI.app.zip'
 - After download, open the app and select 'Post Install Root Patch'.
 - Wait for a while and reboot the system after it finishes.
-- Replace amfi=0x80 with -amfipassbeta under boot-args inside your config.plist to restore AMFI support.
 - Enjoy your E7250 on Sonoma :)
 
 ## Intel WiFi
