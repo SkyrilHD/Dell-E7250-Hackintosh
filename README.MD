@@ -4,9 +4,9 @@
 [![GitHub release](https://img.shields.io/github/tag/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/releases/)
 [![GitHub issues](https://img.shields.io/github/issues/SkyrilHD/Dell-E7250-Hackintosh.svg)](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/issues/)
 
-### This repo contains all the fixes for E7250 on macOS Sonoma.
+### This repo contains all the fixes for E7250 on macOS Sequoia.
 
-The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Sonoma. If you want an EFI made specifically for Monterey, check the [12.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/12.0). For Ventura, check the [13.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/13.0).
+The EFI folder can also be used on older versions of macOS. However, the main support of this branch is based on Sequoia. If you want an EFI made specifically for Monterey, check the [12.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/12.0). For Sonoma, check the [14.0 branch](https://github.com/SkyrilHD/Dell-E7250-Hackintosh/tree/14.0).
 
 Tested on:
 
@@ -18,7 +18,7 @@ RAM | 16GB DDR3 1600Mhz
 Storage | SK hynix SC210 mSATA 128GB
 WiFi | Intel Dual Band Wireless-AC 7265
 GSM/LTE | Sierra Wireless AirPrime EM7305 (DW5809e)
-Software | macOS 14.0 Sonoma
+Software | macOS 15.0 Sequoia
 
 ## What works?
 
@@ -54,10 +54,10 @@ First we need to download these three Applications: [Hackintool](https://github.
 With Apple dropping support for all pre-Kaby Lake machines on Ventura and newer, graphics support for Broadwell and other previously supported GPUs has been removed as well. To restore GPU acceleration, we have to both weaken SIP and modify the root volume. Modifying the root volume results in losing the ability to apply Delta OTA updates. The root patches must be re-applied after each macOS update. To add the required kexts back to the system, use a tool called OpenCore Legacy Patcher, which has an amazing team that adds back support for older Macs.
 
 - Go to the latest OpenCore Legacy Patcher Release page: [Link](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
-- Download 'OpenCore-Patcher-GUI.app.zip'
-- After download, open the app and select 'Post Install Root Patch'.
+- Download 'OpenCore-Patcher.pkg'
+- After download, install the .pkg, open the app and select 'Post Install Root Patch'.
 - Wait for a while and reboot the system after it finishes.
-- Enjoy your E7250 on Sonoma :)
+- Enjoy your E7250 on Sequoia :)
 
 ## Intel WiFi
 
@@ -69,9 +69,9 @@ Since Monterey, the Bluetooth implementation has changed and therefore causes is
 
 If you want Continuity features: Buy a Broadcom card on eBay or your trusted website. You can check the Dortania buyers guide to see which card is the better option: [Link](https://dortania.github.io/Wireless-Buyers-Guide/)
 
-## OTA from Monterey to Sonoma
+## OTA from Monterey to Sequoia
 
-Since v5.0 installing Sonoma via OTA should be very easy. Replace your Monterey EFI with Sonoma and boot as usual. Open 'System Preferences' and go to 'Software Update'. Download macOS Sonoma and proceed with the installation as a normal update. After update, run OpenCore Legacy Patcher to fix GPU acceleration. Here's a little [guide](#GPU-acceleration-on-Ventura-and-newer) you can follow. Keep in mind that replacing Monterey EFI with Sonoma drops AirportItlwm support on Monterey! If you want to upgrade to Sonoma over WiFi, replace the Sonoma version of AirportItlwm with a Monterey version. After the update, you need to roll back the currently version of AirportItlwm to add WiFi support on Sonoma. The same applies to Ventura.
+Since v6.0 installing Sequoia via OTA should be very easy. Replace your Monterey EFI with Sequoia and boot as usual. Open 'System Preferences' and go to 'Software Update'. Download macOS Sequoia and proceed with the installation as a normal update. After update, run OpenCore Legacy Patcher to fix GPU acceleration. Here's a little [guide](#GPU-acceleration-on-Ventura-and-newer) you can follow. Keep in mind that replacing Monterey EFI with Sequoia drops AirportItlwm support on Monterey! If you want to upgrade to Sequoia over WiFi, replace the Sequoia version of AirportItlwm with a Monterey version. After the update, you need to roll back the currently version of AirportItlwm to add WiFi support on Sequoia. The same applies to Ventura.
 
 ## Permission Issues with Applications
 
@@ -83,11 +83,11 @@ For more details, check here: [Link](https://dortania.github.io/OpenCore-Legacy-
 
 For touchscreen models, I also added VoodooI2C to take advantage of the touchscreen display. However, it is disabled. If you want to use it, you have to activate all VoodooI2C-related kexts in the config! Since v3.0 there is a new touchpad kext that also uses VoodooInput. So you need to disable VoodooInput that comes with VoodooPS2 and enable VoodooInput that comes with VoodooI2C, otherwise the system will not boot.
 
-## How to Install macOS Sonoma
+## How to Install macOS Sequoia
 
-There are two ways you can install Sonoma:
+There are two ways you can install Sequoia:
 
-1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
+1. If you have an already working macOS, download the Installer from the App Store and make a bootable Installer with `createinstallmedia` by using this command in Terminal: `sudo /Applications/Install\ macOS\ Sequoia.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
 
 2. If you are using Windows, use [macrecovery.py](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/macrecovery) from the offical [OpenCore release package](https://github.com/acidanthera/OpenCorePkg/releases/). Follow this [guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html) to understand how it works.
 
@@ -111,6 +111,3 @@ Thanks to:
 - Harvé (for suggesting to inject property in Clover)
 - hickorysb (for confirming the fix of glitches with Legacy Option ROMs)
 - zxystd (for fixing the Bluetooth issue and Intel WiFi card)
-
-
-All this was written on an E7250 with Sonoma installed :D
