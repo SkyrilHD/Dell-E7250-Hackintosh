@@ -78,7 +78,6 @@ jobs:
         with:
           name: Legacy_EFI
           path: Output/*.zip
-          merge-multiple: true
           
       - name: Upload to Release
         if: github.event_name == 'release'
