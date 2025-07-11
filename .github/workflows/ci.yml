@@ -19,9 +19,9 @@ jobs:
       - run: mkdir Output && zip --exclude '*.git*' --exclude '*.github*' --exclude '*Output*' -r -X "Output/${{ github.event.repository.name }}-${TAG_VER} (Sequoia).zip" .  
       
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: Artifacts
+          name: Modern_EFI
           path: Output/*.zip
           
       - name: Upload to Release
@@ -74,10 +74,11 @@ jobs:
       - run: mkdir Output && zip --exclude '*.git*' --exclude '*.github*' --exclude '*Output*' --exclude '*Monterey*' -r -X "Output/${{ github.event.repository.name }}-${TAG_VER} (Monterey).zip" .
       
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: Artifacts
+          name: Legacy_EFI
           path: Output/*.zip
+          merge-multiple: true
           
       - name: Upload to Release
         if: github.event_name == 'release'
